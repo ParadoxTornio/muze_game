@@ -128,13 +128,15 @@ class Game:
             for j in i:
                 if j == 1:
                     pixel = MuzeCell((start + counter_x, counter_y + 10))
+                    pixel2 = MuzeCell((start + counter_x + 10, counter_y + 10))
                     self.muze_sprites.add(pixel)
+                    self.muze_sprites.add(pixel2)
                 counter_x += 20
             counter_y += 20
             counter_x = 0
 
 
-player = Player((0, 29.5), (0, 0, 0), 15, 15)
+player = Player((0, 29.5), (0, 0, 0), 15, 11)
 g = Game(player)
 g.show_start_screen()
 while g.running:
